@@ -1,5 +1,7 @@
+from IPython.display import display
 from PIL import Image
 from typing import List
+
 
 # Define a custom type alias for image_list
 
@@ -21,7 +23,7 @@ class ImageProcessor:
             ImageList: A 2D list of RGB values.
         """
         img = Image.open(image_path)
-        img.show()
+        display(Image.open("input.jpg"))
         img = img.convert("RGB")  # Ensure image is in RGB format
 
         width, height = img.size
