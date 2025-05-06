@@ -23,7 +23,7 @@ class ImageProcessor:
             ImageList: A 2D list of RGB values.
         """
         img = Image.open(image_path)
-        display(Image.open("input.jpg"))
+        display(img)
         img = img.convert("RGB")  # Ensure image is in RGB format
 
         width, height = img.size
@@ -59,4 +59,4 @@ class ImageProcessor:
         flat_list = [tuple(pixel) for row in image_list for pixel in row]
         img = Image.new("RGB", self.dimensions)
         img.putdata(flat_list)
-        img.show()
+        display(img)
